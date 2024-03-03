@@ -1,0 +1,640 @@
+* {
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*  CABEÇALHO  */
+
+#header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#logoracionais{
+    width: 13rem;
+    transition: 0.5s all;
+}
+#logoracionais:hover{
+    width: 15.62rem;
+
+}
+.letra1{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    
+}
+#informação{
+    margin-right: 6rem;
+    border: none;
+}
+#Albuns{
+    color:white;
+    text-decoration: none;
+    padding: 0.63rem;
+    border: solid none;
+    transition: 0.5s all;
+}
+#Albuns:hover{
+    font-size: 1.26rem; 
+    color:crimson;
+    border:0.2rem solid crimson;
+}
+#inicio{
+    padding: 0.63rem;
+    transition: 0.5s all;
+}
+#inicio:hover{
+    font-size: 1.26rem;
+    color:crimson;
+    border:0.2rem solid crimson;
+}
+#contatos{
+    padding: 0.63rem;
+    transition: 0.5s all;
+}
+#contatos:hover{
+    font-size: 1.26rem;
+    color:crimson;
+    border:0.2rem solid crimson;
+}
+#logoracionais1{
+  width: 6.25rem;
+  transition: 0.5s all;
+}
+#logoracionais1:hover{
+    width: 15.62rem;
+    border:0.18rem solid crimson;
+}
+
+/*  CABEÇALHO  */
+
+
+
+/*  HISTORIA  */
+#imgemracio{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    background-color: rgb(255, 0, 0);
+    
+}
+#imagemraionais{
+    width: 38rem;
+    
+}
+
+#historico{
+    
+  display: flex;
+  margin-top: 1.25rem;
+ flex-direction: row-reverse;
+  width: 75rem;
+  flex-direction: center;
+  margin: 0 auto;
+  border: 1rem solid crimson;
+  padding: 2rem;
+  background-color: rgba(0, 0, 255, 0);  
+}
+#biografia{
+   
+    width: 70%;
+    display: flex;
+    flex-direction: center;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+.biografia1{
+    margin: 0 auto;
+    padding: 0.63rem;
+    color: white;
+
+}
+#logor{
+    width: 13rem;
+    margin: 0 auto;
+   margin-top: 1.25rem;
+}
+.logor{
+    display: flex;
+    flex-direction: center;
+}
+/*  HISTORIA  */
+
+
+
+/* PARTE DE ALBUNS */
+
+#conteiner{
+    background-color: rgba(0, 255, 255, 0);
+    flex-direction: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#discografia{
+    color: white;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    width: 75rem;
+    height: 10rem;
+    margin-top: 30rem;
+    flex-direction: row-reverse;
+    border-bottom: 1rem solid crimson;
+    padding-bottom: 6rem;
+}
+#discografia2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    margin-right: 8rem;
+}
+#discografia3{
+    width: 17rem;
+    height: 17rem;
+    
+}
+#Albuns1{
+    display: flex;
+  margin-top: 10rem;
+  flex-direction: center;
+  margin: 0 auto;
+    color:white;
+  width: 75rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 6rem;
+}
+#Albuns2{
+    display: flex;
+  margin-top: 3rem;
+  flex-direction: center;
+  margin: 0 auto;
+  
+  width: 75rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 255, 255, 0);
+  font-family: 'Poppins', sans-serif;
+    
+}
+#Albuns3{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: center;
+    margin: 0 auto;
+    width: 75rem;
+    flex-direction: row;
+    align-items: center ;
+    color: white;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0);
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1rem solid crimson;
+    padding-bottom: 6rem;
+}
+#coresevalores{
+ flex-direction: column;
+ display: flex;
+ flex-direction: center;
+ width: 20rem;
+ 
+ padding: 0.5rem;
+ 
+ align-items: center;
+}
+#nomedoalbum{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+    
+}
+#anofaixa{
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+#racionaismcs25{
+    flex-direction: column;
+ display: flex;
+ flex-direction: center;
+ width: 20rem;
+ padding: 0.5rem;
+ align-items: center;
+
+ 
+}
+#nomedoalbum1{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+}
+#anofaixa1{
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+#aovivo{
+    flex-direction: column;
+ display: flex;
+ flex-direction: center;
+ width: 20rem;
+ padding: 0.5rem;
+ align-items: center;
+}
+#nomedoalbum2{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+}
+#anofaixa2{
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+
+#TrutasTretas{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    width: 20rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+.TrutasTretas{
+    width: 13.13rem;
+    margin-top: 1.25rem;
+    border-radius: 0.63rem;
+    height: 11.91rem;
+}
+#nomedoalbum3{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+}
+#anofaixa3{
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+.borda:hover{
+    color: crimson;
+    border: 0.3rem solid crimson;
+    border-radius: 1.25rem;
+
+}
+.borda{
+    margin-top: 1.25rem;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+
+#nadacomoum{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    width: 18.75rem;
+    height: 19rem;
+    padding: 1rem;
+}
+#nomedoalbum4{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+}
+#anofaixa4{ 
+    margin-top: 0.1rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+#disco{
+    margin-top: -8rem;
+    margin-left: 5.62rem;
+    font-size: 1.56rem;
+    color:  rgb(220, 20, 60);
+}
+#disco1{
+    margin-top: -6.25rem;
+    margin-left: 5.62rem;
+    font-size: 1.56rem;
+}
+#nomedoalbum5{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+}
+#anofaixa5{ 
+    margin-top: -0.2rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+}
+#nomedoalbum6{
+    font-size: 0.89rem;
+    color: rgb(255, 255, 255);
+}
+#anofaixa6{ 
+    margin-top: -0.2rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+   
+}
+#TheBestOfRacionaisMCs{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    width: 18.75rem;
+    padding: 0.5rem;
+    align-items: center;
+}
+#SobrevivendonoInferno{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    width: 18.75rem;
+    height: 19rem;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+#Raio-XBrasil{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    width: 18.75rem;
+    height: 19rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#EscolhaoSeuCaminho{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    width: 18.75rem;
+    height: 18.75rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+#HolocaustoUrbano{
+    flex-direction: column;
+    display: flex;
+    flex-direction: center;
+    width: 18.75rem;
+    height: 18.75rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.estiloalbum{
+    width: 58rem;
+    height: 56rem;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    margin: 0 auto; 
+    margin-top: 10rem;
+}
+.estiloalbum1{
+    width: 58rem;
+    height: 36rem;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    margin: 0 auto; 
+    margin-top: 10rem;
+}
+/* PARTE DE ALBUNS */
+
+
+
+/*AGENDA PARA SHOWS*/
+.datasDeShow{
+    width: 58rem;
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30rem;
+}
+.datasCabeçalho{
+    width: 58rem;
+    justify-content: center;
+    display: flex;
+    color:crimson;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+#datadeShow{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+#datadeShow:hover{
+    font-size: 3rem;
+    color: #fff;
+}
+
+#diaseMes{
+    
+    width: 58rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    border-top: 1rem solid #fff;
+    border-bottom: 1rem solid #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#diaseMe{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+#imagemData{
+    width: 30rem;
+    align-items: center;
+    border: 8px solid #fff;
+}
+
+#imagemData:hover{
+    border: 8px solid crimson;
+}
+.datas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: crimson;
+    
+}
+.mes{
+    font-size: 40px;
+    margin-top: 2rem;
+    transition: 0.5s;
+}
+.mes:hover{
+    color: #fff;
+    padding: 10px;
+    border: 3px solid crimson;
+}
+.dias{
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    color: #fff;
+}
+.dias:hover{
+    color: crimson;
+}
+/*AGENDA PARA SHOWS*/
+
+
+
+/*Parte de COntatos*/
+.contatos{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.descricaoContato{
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.Email_e_Numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#email{
+    margin-right: 0.8rem;
+}
+#email1{
+    width: 22rem;
+    height: 3rem;
+    padding: 1rem;
+    outline: none;
+    border: 3px solid grey;
+}
+#nome1{
+    width: 22rem;
+    height: 3rem;
+    padding: 1rem;
+    outline: none;
+    border: 3px solid grey;
+}
+#numero1{
+    margin-top: 1rem;
+    width: 45rem;
+    height: 3rem;
+    padding: 1rem;
+    outline: none;
+    border: 3px solid grey;
+    background-color: #fff;
+}
+
+#comentario1{
+    margin-top: 1rem;
+    width: 45rem;
+    height: 7rem;
+    padding: 1rem;
+    outline: none;
+    border: 3px solid grey;
+}
+#comentario1::-webkit-outer-spin-button,
+#numero1::-webkit-inner-spin-button,
+#nome1::-webkit-inner-spin-button,
+#email1::-webkit-inner-spin-button{
+    appearance: none;
+}
+
+#enviar {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    width: 10rem;
+    height: 3rem;
+    margin-left: 1rem;
+    background: grey;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+#enviar:hover{
+    background: crimson;
+    color: #fff;
+}
+/*Parte de COntatos*/
+
+
+
+/* Frases Racionais */
+
+.conteiner2{
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cabecalhoFrases{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+#frasesRacionais{
+    font-size: 4rem;
+}
+#frasesRacionais:hover{
+    color: crimson;
+}
+#lupaIcon{
+    width: 7rem;
+    
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@100;200;300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(120deg, #1201ff , #0000b7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relogio{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    box-shadow: 0px 8px 10px 0px rgb(0,0,0);
+}
+
+.relogio div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    box-shadow: 5px 5px 15px rgb(0,0,0);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+.relogio span{
+    font-weight: bolder ;
+    font-size: 60px;
+}
+
+.relogio span.tempo{
+    font-size: 15px;
+}
+
+@media screen and (max-width: 750px) {
+    .relogio{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 150px;
+        width: 550px;
+        background: transparent;
+        border-radius: 3px;
+        box-shadow: 5px 5px 5px 5px rgb(0,0,0);
+    }
+    .relogio div{
+        height: 90px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+        background: #ffffff;
+        box-shadow: 5px 5px 15px rgb(0,0,0);
+        border-radius: 7px;
+        letter-spacing: 3px;
+        
+    }
+    .relogio span{
+        font-weight: bolder ;
+        font-size: 45px;
+    }
+    
+    .relogio span.tempo{
+        font-size: 10px;
+    }
+}

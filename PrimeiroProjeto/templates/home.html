@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <div method="post">
+    <h1>Meus Projetos </h1>
+    <div class="linha1">
+        <div class="projects">
+        <a href="{{ url_for('JogoMario')}}"><img src="../static/Image/imagesMario/jogomario.jpeg" id="mario"></a>
+        <h1 class="letraproj">Mario Run</h1 >
+        </div>
+        <div class="projects">
+        <a href="{{ url_for('racionaismcs')}}"><img src="../static/Image/racionaismcs/Racionais Mc_s - Fotos.jpeg" id="racionaismcs"></a>
+        <h1 class="letraproj">Racionais'Mcs</h1 >
+        </div>
+        <div class="projects">
+        <a href="{{ url_for('calculadoraIMC')}}"><img src="../static/Image/CalculadoraIMC/Calculadora imc.jpeg" id="imc"></a>
+        <h1 class="letraproj">Calculadora IMC</h1 >
+        </div>
+</div >
+    <div method="post" class="linha1">
+        <div class="projects2">
+        <a class="link" href="{{url_for('conversorTemperatura')}}"><img src="../static/Image/ConversordeTemeperatura/conversor.jpeg" id="conversor"></a>
+        <h1 class="letraproj">Conversor </h1 >
+        </div>
+        <div class="projects2">
+            <div class="divhover">      
+            <a class="link" href="{{ url_for('landingpage') }}"><img src="../static/Image/ladingpPage/imagens/Tech fest jogo.jpeg" id="tech"></a>
+            <h1 class="letraproj">Tech Fest </h1 >
+            </div> 
+        </div>
+        <div class="projects2">
+        <a  class="link" href="{{ url_for('RelogioDigital') }}"><img src="../static/Image/relogio digital.jpeg" id="relogio"></a>
+        <h1 class="letraproj">Relogio Digital</h1 >
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
