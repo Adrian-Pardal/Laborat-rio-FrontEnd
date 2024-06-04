@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/home.css')}}">
+</head>
+<body>
+    <section id="main-section">
+         <section id="section-cardapio">
+                 <div id="cardapio-texto">
+                     <h1>Cardapio Cantina Universitaria</h1>
+                
+                 </div>
+                 <div>
+                     <div id="div-unversal-cardapio">
+                            <div id="cardapio-comida">
+                                <!--<h1 class="letra-comida">Comidas</h1>
+                                <div id="cardapio-comida-sobre">
+                                    <div class="card">
+                                        <div class="div-img">
+                                            <img  class='img-cardapio' src="{{ url_for('static' , filename = 'img/hambuguer.jpg')}}" alt="" >
+                                        </div>
+                                        <div class="descricao">
+                                            <h1>Hambuguer - X Tudo</h1>
+                                        </div>
+                                        <div>
+                                            <a href="{{ url_for('Hambuguer')}}"><button class="btn-card">Ver Mais</button></a>
+                                        </div>
+
+                                    </div>
+                                    <div class="card">
+                                        <div class="div-img">
+                                            <img  class='img-cardapio' src="{{ url_for('static' , filename = 'img/pudim.jpg')}}" alt="" >
+                                        </div>
+                                        <div class="descricao">
+                                            <h1>Pudim</h1>
+                                            
+                                        </div>
+                                        <div>
+                                            <a href="{{ url_for('Pudim')}}"><button class="btn-card">Ver Mais</button></a>
+                                        </div>
+
+                                    </div>-->
+                                    {% for comida in comidas%}
+                                    <div class="card">
+                                        <div class="div-img">
+                                            <img  class='img-cardapio' src="{{ url_for('static' , filename=comida.img)}}" alt="{{ comida.nome}}" >
+                                        </div>
+                                        <div class="descricao">
+                                            <h1>{{comida.nome}}</h1>
+                                            
+                                        </div>
+                                        <div>
+                                            <a href="{{ url_for()}}" ><button class="btn-card">Ver Mais</button></a>
+                                        </div>
+
+                                    </div>
+                                    {% endfor%}
+                                </div>
+                               
+                            </div>
+                           
+                              
+                     </div>
+                     
+                 </div>
+         </section>
+    </section>
+</body>
+</html>

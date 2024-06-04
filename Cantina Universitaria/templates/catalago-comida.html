@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalago</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/home.css')}}">
+</head>
+<body>
+    <section class="main-section">
+        <header>
+            <h1 class="letra-header">  Cardapio Universitario  </h1>
+        </header>
+        <div class="div-conteiner">
+            {% for comida in comidas%}
+            <div class="card">
+                <div class="div-img">
+                    <img  class='img-cardapio' src="{{ url_for('static' , filename=comida.img)}}" alt="{{ comida.nome}}" >
+                </div>
+                <div class="descricao">
+                    <h1 class="letra">{{comida.nome}}</h1>
+                </div>
+                <div>
+                    <h1>R${{comida.preco}}</h1>
+                </div>
+                <div>
+                    <a href="{{ url_for('comida' , id=comida.id)}}" ><button class="btn-card">Ver Mais</button></a>
+                </div>
+
+            </div>
+            {% endfor%}
+        </div>
+    </section>
+</body>
+</html>

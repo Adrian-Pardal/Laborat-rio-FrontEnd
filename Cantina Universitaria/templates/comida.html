@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{comida.nome}}</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/comida.css')}}">
+</head>
+<body>
+    <section>
+            <section id="descricao-hambuguer">
+                  <div id="informacao">
+                            <div>
+                                <img  class='img' src="{{ url_for('static' , filename = comida.banner)}}" alt="{{comida.nome}}" >
+                            </div>
+                            <div>
+                                <h1 class="letra1">{{comida.nome}}</h1>
+                            </div>
+                            <div class="ingrediente">
+                                <strong>Ingrediente :</strong> <h1>  {{comida.ingrediente}}  </h1>
+                            </div>
+                            <div class="mode-preparo">
+                                <strong>Modo de Preparo :</strong> <h1>  {{comida.modoPreparo}}  </h1>
+                            </div>
+                  </div>
+            </section>
+            <section id="section-comentario">
+                <h1 class="letra1">Comentário</h1>
+                <div class="div-conteiner">
+                    {% for comentario in comentarios %}
+                    {% if comida.nome == comentario.categoria%}
+                    <div id="card">
+                        <div>
+                            <img src="{{url_for('static' , filename = comentario.img)}}" alt="{{comentario.nome}}" class="img_pessoa">
+                        </div>
+                        <div>
+                            <h1 class="nome_pessoa">{{comentario.nome}}</h1>
+                        </div>
+                        <div class="div-comentario">
+                            <h2 class="comentario_pessoa">{{comentario.comentario}}</h2>
+                        </div>
+                        
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+               
+                   
+            </section>
+    </section>
+</body>
+</html>
