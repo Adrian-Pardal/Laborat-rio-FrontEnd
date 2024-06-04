@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{game.nome}}</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='CSS/game.css')}}">
+</head>
+<body>
+    <section>
+        <header class="header">
+            <h2>Historia Games</h2>
+            <img src="{{ url_for('static' , filename='img/controle.jpeg')}}" alt="" id="controle-img">
+        </header>
+        <div class="div-conteiner">
+            <div>
+                <img src="{{ url_for('static' , filename= game.banner)}}" alt="{{ game.nome }}" class="img">
+            </div>
+            <div>
+                <h1 class="letra1">{{game.nome}}</h1>
+            </div>
+            <div>
+                <h1 class="letra2">Lançado em {{game.ano}}</h1>
+            </div>
+            <div>
+                <h1 class="letra2">Desenvolvedor : {{game.desenvolvedor}}</h1>
+            </div>
+            <div>
+                <h1 class="letra3">Estilo de Jogo {{game.estilo}} e Tempo de Duração {{game.tempo}}</h1>
+            </div>
+            <div>
+                <h1 class="letra4"> Plataformas : {{game.plataforma}}</h1>
+            </div>
+            <div class="resumo">
+                <h2 class="letra5">{{game.resumo}}</h2>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='CSS/catalogo-games.css')}}">
+</head>
+<body>
+    <header class="header">
+        <h2>Catalago Games</h2>
+        
+        <img src="{{ url_for('static' , filename='img/controle.jpeg')}}" alt="" id="controle-img">
+        <p></p>
+    </header>
+    
+    <section class="main-section">
+        
+        
+        <section class="catalogo">
+          
+        <div class="div-conteiner">
+        {% for game in games %}
+            <div class="card">
+                <img src="{{ url_for('static' , filename= game.img)}}" alt="{{ game.nome }}" class="img">
+                <header>
+                <h2 class="letra">{{game.nome}}</h2>
+                </header>
+                <button class="bnt-vermais"><a href="{{ url_for('games', id=game.id) }}">Ver Mais</a></button>
+            </div>
+        {% endfor %}
+        </div>
+        </section>
+        
+    </section>
+</body>
+</html>
