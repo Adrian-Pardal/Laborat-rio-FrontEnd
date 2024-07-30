@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte e Acesso</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/TelaTransporte.css')}}">
+</head>
+<body>
+    <header>
+        
+        <div>
+            <a class="link" href="{{url_for('home')}}"><h1 class="letra-header">Universidade Virtual</h1></a>
+        </div>
+        <div class="div-link">
+            <a class="link" href="{{url_for('Eventos')}}"><h1 class="link" >Eventos</h1></a>
+            <a class="link" href="{{url_for('Campus')}}"><h1 class="link">Mapa Campus</h1></a>
+            <a class="link" href="{{url_for('organizacao')}}"><h1 class="link">Clubes e Organizações Estudantis</h1></a>
+            <a class="link" href="{{url_for('servico')}}"><h1 class="link">Serviços</h1></a>
+            <a class="link" href="{{url_for('transporte')}}"><h1 class="link">Transporte</h1></a>
+        </div>
+   
+    </header>
+
+    <main>
+
+        <section class="Transporte">
+            <div class="transporte1">
+            {%for transporte in transporte_list%}
+            {%if transporte.categoria == "Onibus"%}
+                    <div class="card">
+                        <div><img  class="img-transporte" src="{{url_for('static' , filename = transporte.foto)}}" ></div>
+                        <div> <h1 class="letra1">{{transporte.nome}}</h1></div>
+                        <div> <h1 class="letra2">{{transporte.cidade}}</h1></div>
+                        <div> <h1 class="letra3">{{transporte.localEncontro}}</h1></div>
+                        <div> <h1 class="letra4">{{transporte.horario}}</h1></div>
+                        <div> <h1 class="letra5">{{transporte.diasSemana}}</h1></div>
+                        <a href="{{transporte.page_url}}"><button class="btn">WhatsApp</button></a>
+                    </div>
+                {% endif %}
+                {% endfor %}
+            </div>    
+
+            <div class="transporte2">
+                {%for transporte in transporte_list%}
+                {%if transporte.categoria == "Van"%}
+                    <div class="card">
+                        <div><img  class="img-transporte" src="{{url_for('static' , filename = transporte.foto)}}" ></div>
+                        <div> <h1 class="letra1">{{transporte.nome}}</h1></div>
+                        <div> <h1 class="letra2">{{transporte.cidade}}</h1></div>
+                        <div> <h1 class="letra3">{{transporte.localEncontro}}</h1></div>
+                        <div> <h1 class="letra4">{{transporte.horario}}</h1></div>
+                        <div> <h1 class="letra5">{{transporte.diasSemana}}</h1></div>
+                        <a href="{{transporte.page_url}}"><button class="btn">WhatsApp</button></a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

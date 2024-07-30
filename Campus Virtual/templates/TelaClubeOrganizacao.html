@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubes e Organizações Estudantis</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/TelaClubeOrganizacao.css')}}">
+</head>
+<body>
+    <header>
+        
+        <div>
+            <a class="link" href="{{url_for('home')}}"><h1 class="letra-header">Universidade Virtual</h1></a>
+        </div>
+        <div class="div-link">
+            <a class="link" href="{{url_for('Eventos')}}"><h1 class="link">Eventos</h1></a>
+            <a class="link" href="{{url_for('Campus')}}"><h1 class="link">Mapa Campus</h1></a>
+            <a class="link" href="{{url_for('organizacao')}}"><h1 class="link">Clubes e Organizações Estudantis</h1></a>
+            <a class="link" href="{{url_for('servico')}}"><h1 class="link">Serviços</h1></a>
+            <a class="link" href="{{url_for('transporte')}}"><h1 class="link">Transporte</h1></a>
+        </div>
+   
+    </header>
+    <main>
+
+        <section class="main-club">
+
+            {%for club in clube_list%}
+            
+                <div class="card">
+                    <div>
+                        <img  class="img" src="{{ url_for('static' , filename = club.foto) }}">
+                    </div>
+                    <div>
+                        <h1 class="letra1">{{club.nome}}</h1>
+                    </div>
+                    <div>
+                        <h2 class="letra2">{{club.curso}}</h2>
+                    </div>
+                    <div>
+                        <h3 class="letra3">{{club.descricao}}</h3>
+                    </div>
+                    <div><a class="letra-link" href="{{club.page_url}}" target="_blank"><button class="btn"><h4>INSTAGRAM</h4></button></a></div>
+                
+                
+                </div>
+            {% endfor %}
+        </section>
+
+    </main>
+</body>
+</html>

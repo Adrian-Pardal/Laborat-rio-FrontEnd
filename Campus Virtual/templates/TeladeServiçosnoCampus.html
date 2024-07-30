@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Serviços no Campus</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/TeladeServiconoCampus.css')}}">
+</head>
+<body>
+    <header>
+        
+        <div>
+            <a class="link" href="{{url_for('home')}}"><h1 class="letra-header">Universidade Virtual</h1></a>
+        </div>
+        <div class="div-link">
+            <a class="link" href="{{url_for('Eventos')}}"><h1 class="link">Eventos</h1></a>
+            <a class="link" href="{{url_for('Campus')}}"><h1 class="link">Mapa Campus</h1></a>
+            <a class="link" href="{{url_for('organizacao')}}"><h1 class="link">Clubes e Organizações Estudantis</h1></a>
+            <a class="link" href="{{url_for('servico')}}"><h1 class="link">Serviços</h1></a>
+            <a class="link" href="{{url_for('transporte')}}"><h1 class="link">Transporte</h1></a>
+        </div>
+   
+    </header>
+    <main>
+    
+
+         <section class="cantina">
+            {% for cantina in cantina%}
+                
+                    <div class="nome-cantina"> <h1 class="letra-nome-cantina">{{cantina.nome}}</h1> </div>
+                <div class="cantina-informacao">
+                    <div class="localizacao"> <img class="svg-1" src="{{url_for('static' , filename='img/TelaServico/svg/localizacao.svg')}}" ><h3>{{cantina.localizacao}}</h3></div>
+
+                    <div> 
+                        <div class="turno-cantina"> <img class="svg-1" src="{{url_for('static' , filename='img/TelaServico/svg/relogio.svg')}}" > <h3> {{ cantina.horarioDia }}</h3> </div>
+                        <div class="turno-cantina"> <img class="svg-1" src="{{url_for('static' , filename='img/TelaServico/svg/relogio.svg')}}" > <h3> {{ cantina.horarioNoite}}</h3> </div>
+                    </div>
+                    <div  class="turno-cantina">
+                        <img class="svg-1" src="{{url_for('static' , filename='img/TelaServico/svg/trabalho.svg')}}" ><h3>{{cantina.funcionamento}}</h3>
+                    </div>
+                </div>    
+            {% endfor %}
+                    <div class="cardapio">
+                        {% for cantina in cantina%}
+                        {%if cantina.cantina == "Cantina" %}
+                                <div class="nome-cantina" ><h1 class="letra-nome-cantina">{{cantina.cantina}}</h1></div>
+                        {% endif %}
+                        {% endfor %}
+                        
+                    <div class="conteiner-comida">
+                     <div class="comida">
+                        {% for comida in comida%}
+                        
+                            
+                                <div class="card">
+                                    <div> <img class="img-comida"  src="{{url_for('static' , filename = comida.foto)}}" > </div>
+                                    <div><h1 class="letra-comida1">{{comida.nome}}</h1></div>
+                                    <div><h2 class="letra-comida2">R${{comida.preco}}</h2></div>
+                                </div>
+                          
+                        
+                        {% endfor%}
+                     </div>
+                    </div>    
+                    </div>
+                </div>
+            
+         </section>
+
+         <section class="section-seguranca">
+
+            {%for seguranca in seguranca%}
+            <div class="div-conteiner">
+                <div>
+                    <img class="img-seguranca" src="{{url_for('static' , filename = seguranca.foto)}}">
+                </div>
+                <div class="div-seguranca">
+                    <div><h1 class="letra-seguranca">{{seguranca.nome}} ({{seguranca.tempo}})</h1></div>
+                    <div><h2 class="letra-seguranca">{{seguranca.informacao}}</h2></div>
+                    <div class="div-seguranca2"> <img class="svg-1" src="{{url_for('static' , filename='img/TelaServico/svg/trabalho.svg')}}" > <h1 class="letra-seguranca">{{seguranca.horarioDia}} e {{seguranca.horarioNoite}}</h1></div>
+                </div>
+            </div>
+            {% endfor %}
+         </section>
+    </main>
+</body>
+</html>

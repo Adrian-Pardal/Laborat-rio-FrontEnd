@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #44151B;
+
+}
+header{
+    width: 100%;
+    height: 7vh;
+    background: #6C1D20 ;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.link{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+
+}
+.div-link{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.letra-header{
+    color: #fff;
+}
+/* header */
+.Transporte{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.img-transporte{
+    width: 150px;
+    border: solid 3px #fff;
+}
+
+
+
+
+
+.card{
+    width: 35vh;
+    height: 65vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border: solid 5px #fff;
+    padding: 15px 15px;
+
+    gap: 1rem;
+
+    background: #771E20;
+}
+
+.btn{
+    width: 20vh;
+    height: 5vh;
+
+    padding: 5px 5px;
+    color: #771E20;
+
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+
+    border: solid #fff 3px;
+
+    background: #fff;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: none;
+    color: #fff;
+}
+
+.letra1{
+    font-size: 18px;
+    color: #fff;
+}
+.letra2{
+    font-size: 15px;
+    color: #fff;
+}
+.letra3{
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+.letra4{
+    font-size: 15px;
+    color: #fff;
+}
+.letra5{
+    font-size: 15px;
+    color: #fff;
+}
+
+.transporte1{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.transporte2{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+/* Desktop */
+@media screen and (max-width: 1200px) and (min-width: 1000px)  {
+    .link{
+        font-size: 15px;
+    }
+    .letra-header{
+        font-size: 15px;
+        
+    }
+    .img-transporte{
+        width: 140px;
+    }
+    .letra1{
+        font-size: 15px;
+        
+    }
+    .letra2{
+        font-size: 12px;
+      
+    }
+    .letra3{
+        font-size: 12px;
+      
+    }
+    .letra4{
+        font-size: 12px;
+        
+    }
+    .letra5{
+        font-size: 12px;
+        
+    }
+    .card{
+        width: 32vh;
+    }
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .link{
+        font-size: 12px;
+        text-decoration: none;
+       
+    
+    }
+    .div-link{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .letra-header{
+      
+        font-size: 15px;
+    } 
+    .card{
+        width: 30vh;
+        
+    }   
+   
+}
+
+
+/* mobile */
+@media screen and (max-width: 375px){ 
+
+    .link{
+        font-size: 4px;
+        text-decoration: none;
+        color: #fff;
+    
+    }
+    .div-link{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .letra-header{
+        color: #fff;
+        font-size: 5px;
+    }    
+    .card{
+        width: 30vh;}
+    .img-transporte{
+        width: 80px;
+        
+        
+    }
+    .letra1{
+        
+        font-size: 8px;
+    }
+    .letra2{
+        
+        font-size: 8px;
+    }
+    .letra3{
+        
+        font-size: 8px;
+    }
+    .letra4{
+        
+        font-size: 8px;
+    }
+    .letra5{
+        
+        font-size: 8px;
+    }
+    
+    
+    .btn{
+        width: 15vh;
+        height: 5vh;
+        font-size: 13px;
+    }
+    
+}

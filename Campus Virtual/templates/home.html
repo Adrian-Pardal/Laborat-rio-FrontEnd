@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/TelaHome.css')}}">
+</head>
+<body>
+    <header>
+        
+      
+            <img class="img-logo" src="{{url_for('static' , filename = 'img/TelaHome/logo.jpg')}}">
+            <h1 class="letra-logo">Universidade de Vassouras</h1>
+        
+   
+    </header>
+    <main>
+            <section>
+                    {% for informacao in informacao %}
+                        <div class="card">
+                                <div> <img src="{{url_for('static' , filename = informacao.foto)}}" class="img-informacao"></div>
+                                <div><h1 class="letra1">{{informacao.nome}}:</h1></div>
+                                <div><h1 class="letra2">{{informacao.descricao}}</h1></div>
+                                <div><a href="{{url_for(informacao.page_url)}}"><button class="btn">Ver Mais</button></a></div>
+                                <div></div>
+                        </div>
+                    {% endfor %}
+            </section>
+    </main>
+</body>
+</html>

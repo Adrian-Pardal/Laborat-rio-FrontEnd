@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalações do Campus</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/mapacampus.css')}}">
+</head>
+<body>
+    <header>
+        
+        <div>
+            <a class="link" href="{{url_for('home')}}"><h1 class="letra-header">Universidade Virtual</h1></a>
+        </div>
+        <div class="div-link">
+            <a class="link" href="{{url_for('Eventos')}}"><h1 class="link">Eventos</h1></a>
+            <a class="link" href="{{url_for('Campus')}}"><h1 class="link">Mapa Campus</h1></a>
+            <a class="link" href="{{url_for('organizacao')}}"><h1 class="link">Clubes e Organizações Estudantis</h1></a>
+            <a class="link" href="{{url_for('servico')}}"><h1 class="link">Serviços</h1></a>
+            <a class="link" href="{{url_for('transporte')}}"><h1 class="link">Transporte</h1></a>
+        </div>
+   
+    </header>
+
+ <main>
+
+    <section >
+    <div class="principal">
+        <div class="conteiner">
+            <div class="conteiner1">
+                <div  class="bloco8"><img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/8.svg')}}" alt=""></div>
+                <div  class="bloco9"><img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/9.svg')}}" alt=""></div>
+            </div>
+            <div class="conteiner2">
+                <div>
+                    <div  class="bloco6">
+                        <img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/6.svg')}}" alt=""> 
+                    </div>
+                </div>
+                <div>
+                    <div  class="bloco7"><img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/7.svg')}}" alt=""></div>
+                </div>
+                <div>
+                    <div  class="bloco5"><img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/5.svg')}}" alt=""></div>
+                </div>
+            </div>
+            <div class="conteiner3">
+                <div  class="bloco4"><img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/4.svg')}}" alt=""></div>
+                <div  class="bloco3"><img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/3.svg')}}" alt=""></div>
+            </div>
+            <div class="conteiner4">
+                <div  class="bloco2">
+                    <img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/2.svg')}}" alt="">
+                </div>
+
+                <div  class="bloco1">
+                    <img class="number"  src="{{url_for('static' , filename='img/TelaCampus/numero/1.svg')}}" alt="">
+                </div>
+            </div>
+        </div>   
+    </div>    
+    </section>
+    
+    <section class="bloco-section">
+            <div class="bloco-conteiner">
+                {% for blocos in blocos%}
+                    <div class="card">
+                        <div>
+                            <h1 class="letra-bloco">{{blocos.nome}}</h1>
+                        </div>
+
+                        <div class="div-piso">
+                            <div>
+                                <h2 class="letra-piso">{{blocos.piso1}}</h2>
+                            </div>
+                            <div class="div-piso-setor">
+                                <h3 class="letra-setor">{{blocos.setor1Piso1}}</h3>
+                                <h3 class="letra-setor">{{blocos.setor2Piso1}}</h3>
+                                <h3 class="letra-setor">{{blocos.setor3Piso1}}</h3>
+                            </div>
+                        </div>
+
+                        <div class="div-piso">
+                            <div >
+                                <h1 class="letra-piso">{{blocos.piso2}}</h1>
+                            </div>
+                            <div>
+                                <div class="div-piso-setor">
+                                    <h3 class="letra-setor">{{blocos.setor1Piso2}}</h3>
+                                    <h3 class="letra-setor">{{blocos.setor2Piso2}}</h3>
+                                    <h3 class="letra-setor">{{blocos.setor3Piso2}}</h3>
+                                    <h3 class="letra-setor">{{blocos.setor4Piso2}}</h3>
+                                    <h3 class="letra-setor">{{blocos.setor5Piso2}}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    {%if blocos.piso3 == "3° Piso "%}
+                        <div class="div-piso">
+                            <div >
+                                <h1 class="letra-piso">{{blocos.piso3}}</h1>
+                            </div>
+                            <div class="div-piso-setor">
+                                <h3 class="letra-setor">{{blocos.setor1Piso3}}</h3>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {%if blocos.piso4 == "4° Piso "%}
+                        <div class="div-piso">
+                            <div  >
+                                <h1 class="letra-piso">{{blocos.piso4}}</h1>
+                            </div>
+                            <div class="div-piso-setor">
+                                <h3  class="letra-setor">{{blocos.setor1Piso4}}</h3>
+                            </div>
+                        </div>
+                    {% endif %}
+                    </div>
+                {% endfor %}
+            </div> 
+               
+    </section>
+ </main>
+</body>
+</html>

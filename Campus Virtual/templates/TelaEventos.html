@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Acadêmicos</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='css/TelaEventos.css')}}">
+</head>
+<body>
+    <header>
+        
+        <div>
+            <a class="link" href="{{url_for('home')}}"><h1 class="letra-header">Universidade Virtual</h1></a>
+        </div>
+        <div class="div-link">
+            <a class="link" href="{{url_for('Eventos')}}"><h1 class="link">Eventos</h1></a>
+            <a class="link" href="{{url_for('Campus')}}"><h1 class="link">Mapa Campus</h1></a>
+            <a class="link" href="{{url_for('organizacao')}}"><h1 class="link">Clubes e Organizações Estudantis</h1></a>
+            <a class="link" href="{{url_for('servico')}}"><h1 class="link">Serviços</h1></a>
+            <a class="link" href="{{url_for('transporte')}}"><h1 class="link">Transporte</h1></a>
+        </div>
+   
+</header>
+
+    <main>
+        <section>
+
+            <div class="div-conteiner">
+                    {% for evento in eventos_list %}
+                    {% if evento.categoria == "palestra" %}
+                        <div class="card">
+                            <div>
+                                <img class="img" src="{{url_for('static' , filename = evento.foto)}}" >
+                            </div>
+                            <div>
+                                <h1 class="letra1">{{evento.nome}}</h1>
+                            </div>
+                            <div>
+                                <h3 class="letra2">Data : {{evento.data}}</h3>
+                            </div>
+                            <div>
+                                <h3 class="letra2">Horario : {{evento.hora}}</h3>
+                            </div>
+                            <div>
+                                <h3 class="letra3">Local: {{evento.local}}</h3>
+                            </div>
+                            <div>
+                                <h3 class="letra4">Palestrante : {{evento.palestrante}}</h3>
+                            </div>
+                            <div>
+                                <a   href="{{evento.page_url}}"><button class="btn" >Inscrições</button></a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+
+            </div>
+            <div class="div-conteiner">
+                {% for evento in eventos_list %}
+                {% if evento.categoria == "laboratorio" %}
+                    <div class="card">
+                        <div>
+                            <img class="img" src="{{url_for('static' , filename = evento.foto)}}" >
+                        </div>
+                        <div>
+                            <h1 class="letra1">{{evento.nome}}</h1>
+                        </div>
+                        <div>
+                            <h3 class="letra2">Data : {{evento.data}}</h3>
+                        </div>
+                        <div>
+                            <h3 class="letra2">Horario : {{evento.hora}}</h3>
+                        </div>
+                        <div>
+                            <h3 class="letra3">Local: {{evento.local}}</h3>
+                        </div>
+                        <div>
+                            <h3 class="letra4" >Palestrante : {{evento.palestrante}}</h3>
+                        </div>
+                        <div>
+                            <a href="{{evento.page_url}}"><button class="btn">Inscrições</button></a>
+                        </div>
+                    </div>
+                {% endif %}
+                {% endfor %}
+
+        </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+
+    </footer>
+</body>
+</html>

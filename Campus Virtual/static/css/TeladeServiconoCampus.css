@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #44151B;
+
+}
+header{
+    width: 100%;
+    height: 7vh;
+    background: #6C1D20 ;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
+}
+
+
+.link{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+
+}
+.div-link{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.letra-header{
+    color: #fff;
+}
+/* header */
+
+.cantina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nome-cantina{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.letra-nome-cantina{
+    font-size: 45px;
+    color: #fff;
+    border: solid 5px #fff;
+    padding: 15px;
+    
+    background: #6C1D20 ;
+    width: 80vh;
+}
+.cantina-informacao{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px #fff;
+    padding: 15px;
+    
+    background: #6C1D20 ;
+    flex-direction: column;
+    width: 80vh;
+}
+.localizacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    color: #fff;
+
+    
+}
+.svg-1{
+    width: 35px;
+}
+
+.turno-cantina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    color: #fff;
+}
+
+.cardapio{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.conteiner-comida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 80vh;
+    background: #6C1D20 ;
+}
+.comida{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 30px;
+    border: solid #fff 5px;
+}
+.card{
+    width: 20vh;
+    height: 35vh;
+    border: solid #fff 3px;
+
+    gap: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img-comida{
+    width: 100px;
+    border: solid #fff 2px;
+}
+.letra-comida1{
+    font-size: 16px;
+    color: #fff;
+}
+.letra-comida2{
+    font-size: 16px;
+    color: #fff;
+}
+
+
+.section-seguranca{
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+}
+.img-seguranca{
+    width: 120vh;
+    border: solid #fff 5px;
+}
+
+.div-seguranca{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-direction: column;
+
+    background: #6C1D20;
+    border: solid #fff 5px;
+    padding: 30px;
+
+    gap: 2.5rem;
+}
+
+.letra-seguranca{
+    font-size: 24px;
+    color: #fff;
+}
+.div-seguranca2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+/* Desktop */
+@media screen and (max-width: 1200px) and (min-width: 1000px)  {
+    .link{
+        font-size: 15px;
+    }
+    .letra-header{
+        font-size: 15px;
+        
+    }
+    .letra-nome-cantina{
+        font-size: 25px;
+        text-align: center;
+        
+        
+    }
+    .card{
+      
+        gap: 1rem;
+    }
+    .img-comida{
+        width: 80px;
+       
+    }
+    .letra-comida1{
+        font-size: 13px;
+    }
+    .letra-comida2{
+        font-size: 13px;
+    }
+    .img-seguranca{
+        width: 80vh;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .link{
+        font-size: 12px;
+        text-decoration: none;
+        color: #fff;
+    
+    }
+    .div-link{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .letra-header{
+        color: #fff;
+        font-size: 15px;
+    }    
+    .letra-nome-cantina{
+        font-size: 25px;
+        text-align: center;
+        
+        width: 60vh;
+        
+    }
+    
+    .conteiner-comida{
+        width: 60vh;
+    }
+    .img-seguranca{
+        width: 60vh; 
+    }
+    .div-conteiner{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-direction: column;
+    }
+    .div-seguranca{
+        width: 60vh;
+    }
+    .cantina-informacao{
+        
+        width: 60vh;
+    }
+}
